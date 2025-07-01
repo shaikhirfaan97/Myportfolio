@@ -21,6 +21,7 @@ function Hero() {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
   return (
     <main>
       <Dropdown isOpen={isOpen} toggle={toggle} />
@@ -31,7 +32,7 @@ function Hero() {
             <ScrollAnimation animateIn="fadeIn">
               <TypeAnimation
                 cursor={false}
-                sequence={["Hi, I'm Irfaan.", () => setShowSubtitle(true)]}
+                sequence={["Hi, I'm Irfaan 👋", () => setShowSubtitle(true)]}
                 speed={{ type: "keyStrokeDelayInMs", value: 150 }}
                 wrapper="h1"
                 repeat={0}
@@ -41,43 +42,33 @@ function Hero() {
                   cursor={true}
                   sequence={[
                     500,
-                    "A Full-Stack Developer.",
+                    "A Full-Stack Developer (4+ yrs exp) 💻",
                     1000,
-                    "A BCS graduate.",
-                    // 'I design and code beautifully simple things, and I love what I do.',
+                    "Built scalable web & mobile apps 📱",
                     1000,
-                    "A problem solver.",
+                    "Let's build something amazing! 💡",
                     1000,
-                    "An innovative thinker.",
+                    "A problem solver 🧠",
+                    1000,
+                    "An innovative thinker 💭",
                     1000,
                     "A....",
                     1000,
-                    "A.... cool guy?",
+                    "A.... cool guy? 😎",
                     1000,
-                    "Ok...",
+                    "Ok... 😅",
                     1000,
-                    "Ok...  I'm running out of ideas...",
+                    "Ok... I'm running out of ideas... 🤯",
                     1000,
-                    "Uhh...",
+                    "You're uh... 🤔",
                     1000,
-                    "Uhh... you can scroll down to see my projects now...",
-                    300,
-                    () => setShowScrollDown(true),
+                    "You're uh... still here? 👀",
                     1000,
-                    "Seriously, my projects are really cool, go check them out!",
+                    "Ok, this has been fun, but I'm gonna restart the loop now... 🔄",
                     1000,
-                    "You're uh...",
-                    1000,
-                    "You're uh... still here?",
-                    1000,
-                    "Ok, this has been fun, but I'm gonna restart the loop now...",
-                    // 1000,
-                    // "Or...",
-                    // 1000,
-                    // "Or... I could scroll you by force! Muahaha!",
-                    1000,
-                    "See ya! :)",
+                    "See ya! 🙂",
                     500,
+                    () => setShowScrollDown(true),
                   ]}
                   speed={50}
                   deletionSpeed={65}
@@ -93,6 +84,7 @@ function Hero() {
             </ScrollAnimation>
           </HeroRight>
         </HeroWrapper>
+
         {showScrollDown && (
           <ScrollAnimation animateIn="flipInX" offset={0}>
             <ScrollDown to="projects" id="scrollDown">
